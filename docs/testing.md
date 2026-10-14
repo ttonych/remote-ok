@@ -16,6 +16,8 @@ Date: 2026-10-14. Environment: Windows 10 x64 build 19045, MSVC 2022, Python 3.1
 | Simulated 150% / 200% layout | See UI review; this is a layout simulation, not a change to Windows monitor scaling |
 | Kodi source metadata | Python 3.8 syntax, XML, matching versions and locale ID coverage validated |
 | Package integrity | Explicit file allowlists, x64 PE checks, ZIP CRC/member validation, identical helper in both ZIPs and SHA-256 output |
+| Tagged release build | [Actions run 38559100603](https://github.com/ttonych/remote-ok/actions/runs/38559100603) passed for `v1.1.0`, commit `92bfb51924d2d0b11400b42ae9c65bcabeececcb`; both ZIPs were published unchanged from this run |
+| Downloaded CI executable | All 26 local lifecycle/UI assertions passed against the executable extracted from the release artifact; uploaded asset digests match the CI files |
 
 The MPC test calls the shipping dispatch implementation from a separate test executable. It does not synthesize a physical HID report. Kodi was run in disposable portable profiles; the add-on folder was installed directly. The ZIP-install UI has not been exercised. Kodi 22 final and Windows 11 have not been tested.
 
