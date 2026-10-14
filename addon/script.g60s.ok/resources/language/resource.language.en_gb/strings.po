@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: G60S OK 1.1.0\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgctxt "#32000"
+msgid "Remote"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Configure remote / HID diagnostics"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Open the Windows configuration window. Select the remote once, then enable mapping."
+msgstr ""
+
+msgctxt "#32003"
+msgid "Instructions"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Open G60S OK in Program add-ons to select your remote."
+msgstr ""
+
+msgctxt "#32005"
+msgid "Close any older G60S OK 1.0 utility or add-on; this add-on will retry automatically."
+msgstr ""
+
+msgctxt "#32006"
+msgid "Could not start the remote helper. Details are in the Kodi log."
+msgstr ""
+
+msgctxt "#32007"
+msgid "This add-on requires Kodi for Windows x64."
+msgstr ""
+
+msgctxt "#32008"
+msgid "Open this add-on, turn off air mouse mode, click Find by OK and press OK. Click Enable, then Return to Kodi. The selection is saved. One press sends one Enter while Kodi is active. The 1.1 desktop app may run alongside it; the add-on has priority in Kodi. Disable this add-on to stop its helper."
+msgstr ""
+
+msgctxt "#32009"
+msgid "The helper is not running. Close any older G60S OK 1.0 utility, wait 10 seconds and try again. If needed, disable and re-enable this add-on. Details are in the Kodi log."
+msgstr ""

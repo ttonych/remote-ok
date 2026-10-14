@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.g60s.ok" name="G60S OK for Kodi" version="1.1.0" provider-name="G60S OK project">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Use the G60S Pro OK button as Enter in Kodi on Windows.</summary>
+    <summary lang="ru_RU">Кнопка OK пульта G60S Pro как Enter в Kodi под Windows.</summary>
+    <description lang="en_GB">A Windows x64 HID helper starts and stops with Kodi. Select the remote once in the configuration window. Mapping is active only while Kodi is in the foreground. No AutoHotkey, extra driver or separate runtime is required.</description>
+    <description lang="ru_RU">Обработчик пульта запускается и останавливается вместе с Kodi. Один раз выберите пульт в окне настройки. Переназначение работает только при активном окне Kodi. AutoHotkey и дополнительные драйверы не нужны. Только Windows x64.</description>
+    <disclaimer lang="en_GB">Community add-on for Windows x64. One Enter per press; long-press actions are not implemented.</disclaimer>
+    <disclaimer lang="ru_RU">Неофициальное дополнение для Windows x64. Одно нажатие — один Enter; длинное нажатие не реализовано.</disclaimer>
+    <platform>windows</platform>
+    <license>MIT</license>
+    <news>1.1.0: English/Russian configuration, compact UI with optional diagnostics, shared desktop/Kodi core and coordinated input ownership.</news>
+  </extension>
+</addon>

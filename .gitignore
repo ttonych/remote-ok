@@ -1,0 +1,11 @@
+/outputs/
+/work/
+/dist/
+/build/
+__pycache__/
+*.pyc
+*.obj
+*.pdb
+*.exe
+*.ini
+*.log

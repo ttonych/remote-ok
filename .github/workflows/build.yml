@@ -1,0 +1,41 @@
+name: Build and verify
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Build, test and package from the version tag
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        run: ./build.ps1 -Release
+      - name: Build and test development source
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        shell: pwsh
+        run: ./build.ps1 -NoPackage
+      - name: Save the two release packages and checksums
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-${{ github.ref_name }}
+          path: dist/v*/*
+          if-no-files-found: error
+          retention-days: 30
+
+# Public releases are published from the successful tag run's artifact only.
+# Local binaries and branch-build binaries must never be uploaded as release assets.

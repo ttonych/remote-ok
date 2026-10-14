@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+  <section id="script.g60s.ok">
+    <category id="remote" label="32000">
+      <group id="1">
+        <setting id="configure" type="action" label="32001" help="32002">
+          <level>0</level>
+          <data>RunScript(script.g60s.ok)</data>
+          <control type="button" format="action"><close>true</close></control>
+        </setting>
+        <setting id="instructions" type="action" label="32003">
+          <level>0</level>
+          <data>RunScript(script.g60s.ok,help)</data>
+          <control type="button" format="action"><close>true</close></control>
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>
