@@ -6,7 +6,9 @@ Make the **OK** button on a G60S Pro remote work on Windows. The desktop app and
 
 The project name leaves room for more remotes. **G60S Pro** is the first supported model; other models are not yet supported. The current app and add-on keep the G60S OK name.
 
-**Version 1.1.0 is undergoing local testing.** Archives ending in `-local` are test builds. The new version still needs testing with a physical remote; the user confirmed the previous prototype worked. Public release EXEs and ZIPs will be built only in GitHub Actions from the version tag.
+**[Download version 1.1.0](https://github.com/ttonych/remote-ok/releases/tag/v1.1.0).** Both release ZIPs and their bundled EXEs are built in GitHub Actions from tag `v1.1.0`, with SHA-256 checksums alongside them. Archives ending in `-local` are separate local test builds.
+
+**Version 1.1.0 has not been tested with a physical remote because none was available.** This release is based on automated and software integration checks. The user confirmed the previous prototype worked; that does not establish hardware verification of this release.
 
 ![English desktop interface](docs/images/desktop-en.png)
 

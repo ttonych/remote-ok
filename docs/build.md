@@ -46,7 +46,7 @@ The runner refuses locations outside `work/`. It creates a temporary test servic
 ## Public release / Публичный релиз
 
 1. Confirm the repository owner/name and review the source-only publication set. Exclude `outputs/`, `work/`, build folders, device settings and logs.
-2. Complete the physical remote checklist in `testing.md`. Set `VERSION`, `addon.xml`, locale headers and version-specific README names together.
+2. Record the physical remote checklist results in `testing.md`. For 1.1.0, publication without a physical remote check was explicitly approved; retain the untested-hardware notice in both READMEs and release notes. Set `VERSION`, `addon.xml`, locale headers and version-specific README names together.
 3. Commit the reviewed source and create the matching `v1.1.0` tag. GitHub Actions must check out that exact tag and run `./build.ps1 -Release` on Windows.
 4. Publish both resulting ZIPs and `SHA256SUMS.txt` only after build and checks succeed. Identify automatic tests and manual remote tests separately in release notes.
 
@@ -54,4 +54,4 @@ The runner refuses locations outside `work/`. It creates a temporary test servic
 
 Workflow `.github/workflows/build.yml` подготовлен локально: ветки и pull request проходят сборку/проверки без релизных пакетов; тег создаёт оба ZIP и SHA-256 одним вызовом `build.ps1 -Release`. Артефакт успешного запуска предназначен для публикации релиза без пересборки и замены файлов.
 
-Исходники проекта: [ttonych/remote-ok](https://github.com/ttonych/remote-ok). Результаты выполнения workflow отображаются в [GitHub Actions](https://github.com/ttonych/remote-ok/actions). Наличие workflow само по себе не подтверждает успешную сборку. Публичный релиз требует отдельного тега и завершения ручных проверок.
+Исходники проекта: [ttonych/remote-ok](https://github.com/ttonych/remote-ok). Результаты выполнения workflow отображаются в [GitHub Actions](https://github.com/ttonych/remote-ok/actions). Наличие workflow само по себе не подтверждает успешную сборку. Публичный релиз требует отдельного тега, успешной сборки и честного описания выполненных и невыполненных проверок.

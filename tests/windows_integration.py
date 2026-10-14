@@ -1,4 +1,5 @@
 """Local Win32 lifecycle and UI checks. Own test processes and profiles only."""
+import argparse
 import ctypes as c
 from ctypes import wintypes as w
 import importlib.util
@@ -81,8 +82,8 @@ def spawn(exe, arguments):
                             creationflags=subprocess.CREATE_NO_WINDOW,
                             stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-def main():
-    exe = ROOT / 'work/build/G60S-OK.exe'
+def main(executable=None):
+    exe = Path(executable).resolve() if executable else ROOT / 'work/build/G60S-OK.exe'
     profile = WORK / 'profile with spaces'
     profile.mkdir(exist_ok=True)
     config = profile / 'desktop.ini'
@@ -167,4 +168,6 @@ def main():
         (WORK / 'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--exe', help='Test this executable, for example one extracted from a CI release ZIP')
+    main(parser.parse_args().exe)
